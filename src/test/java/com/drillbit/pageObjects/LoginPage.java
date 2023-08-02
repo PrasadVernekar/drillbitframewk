@@ -28,6 +28,11 @@ public class LoginPage {
 	@FindBy(xpath="//div[text()='Prasad']")
 	WebElement Name;
 	
+	@FindBy(xpath="//*[@class='MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-1lsgdco']")
+	WebElement logodropdown;
+	
+	@FindBy(xpath="//*[text()='Log out']")
+	WebElement logout;
 	
 	public void setUserName(String uname) {
 		username.sendKeys("prasad.v@drillbit.com");
@@ -37,6 +42,14 @@ public class LoginPage {
 		password.sendKeys("Classmate@27");
 	}
 	
+	/*public void setUserName1(String uname) {
+		username.sendKeys("Hrithik123@mailinator.com");
+	}
+	
+	public void setPassword1(String pwd) {
+		password.sendKeys("Hrithik123@");
+	}*/
+	
 	public void clickSubmit() {
 		login.click();
 	}
@@ -45,6 +58,15 @@ public class LoginPage {
 		return Name.getText(); 
 	}
 	
+	public void dropdown() {
+		logodropdown.click();
+		
+	}
+	
+	public void logout() {
+		logout.click();
+	}
 
+	
 	
 }

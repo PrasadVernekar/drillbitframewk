@@ -7,6 +7,7 @@
       <class name="com.drillbit.testCases.TC_LoginTest_001">
         <methods>
           <include name="loginTest"/>
+          <include name="tearDown"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.drillbit.testCases.TC_LoginTest_001 -->

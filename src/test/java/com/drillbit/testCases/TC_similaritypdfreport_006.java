@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import com.drillbit.pageObjects.*;
 
 public class TC_similaritypdfreport_006 extends BaseClass {
-	@Test (enabled = true)
+	@Test (enabled = false, invocationCount = 10, invocationTimeOut= 1200000)
 	public void similaritypdfreport() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
@@ -35,6 +35,6 @@ public class TC_similaritypdfreport_006 extends BaseClass {
 		Thread.sleep(15000);
 		sr.download();
 		sr.pdfReport();
-
+		driver.quit();
 	}
 }

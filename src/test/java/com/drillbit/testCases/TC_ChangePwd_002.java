@@ -2,12 +2,15 @@ package com.drillbit.testCases;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.annotations.Test;
-
+import org.apache.logging.log4j.*;
 import com.drillbit.pageObjects.*;
 
 public class TC_ChangePwd_002 extends BaseClass
+
 {
- @Test (enabled = true)
+	private static Logger log = LogManager.getLogger(TC_ChangePwd_002.class.getName());
+ @Test (enabled = true, invocationCount = 1, invocationTimeOut= 1200000)
+ 
  public void changepwd() throws InterruptedException {
 	 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	 driver.manage().window().maximize();
@@ -15,6 +18,7 @@ public class TC_ChangePwd_002 extends BaseClass
 	 lp.setUserName(username);
 	 lp.setPassword(password);
 	 lp.clickSubmit();
+	 log.info("Login sucessful");
 	 
 	 Thread.sleep(3000);
 	 
@@ -28,8 +32,10 @@ public class TC_ChangePwd_002 extends BaseClass
 	 cp.newPassword("Classmate@27");
 	 
 	 cp.confirmPassword("Classmate@27");
-	 
 	 cp.chanpd();
+	 cp.DropDown();
+	 Thread.sleep(3000);
+	 cp.logout();
  }
 
 }

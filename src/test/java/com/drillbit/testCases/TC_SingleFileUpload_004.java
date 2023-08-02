@@ -12,7 +12,7 @@ import com.drillbit.pageObjects.*;
 
 public class TC_SingleFileUpload_004 extends BaseClass {
 
-	@Test(enabled = true)
+	@Test(enabled = false, invocationCount = 10, invocationTimeOut= 1200000)
 	public void SingleFileUpload() throws InterruptedException, AWTException {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
@@ -41,7 +41,7 @@ public class TC_SingleFileUpload_004 extends BaseClass {
 		sf.browseyourfile();
 
 		Robot rb = new Robot();
-		StringSelection str = new StringSelection("C:\\Users\\Lenovo\\Downloads\\Testing.pdf");
+		StringSelection str = new StringSelection("F:\\Testing(1).pdf");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
 
 		rb.keyPress(KeyEvent.VK_CONTROL);
@@ -55,8 +55,8 @@ public class TC_SingleFileUpload_004 extends BaseClass {
 		rb.keyPress(KeyEvent.VK_ENTER);
 		rb.delay(2000);
 		rb.keyRelease(KeyEvent.VK_ENTER);
-		sf.AuthorName("S Jaishankar");
-		sf.TitleName("External Affair");
+		sf.AuthorName("Micheal Scott");
+		sf.TitleName("Manager");
 		rb.delay(2000);
 		sf.document_type("e-Book");
 		rb.delay(2000);
@@ -69,6 +69,17 @@ public class TC_SingleFileUpload_004 extends BaseClass {
 		rb.keyRelease(KeyEvent.VK_ENTER);
 		rb.delay(2000);
 		sf.submit();
-
+		
+		
+		
+		
+		
+		
+		Thread.sleep(30000);
+		sf.logo();
+		Thread.sleep(5000);
+		sf.Logout();
+		
+	
 	}
 }

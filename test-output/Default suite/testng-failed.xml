@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.drillbit.testCases.TC_LoginTest_001">
+      <class name="com.drillbit.testCases.TC_ChangePwd_002">
         <methods>
-          <include name="loginTest"/>
+          <include name="changepwd"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.drillbit.testCases.TC_LoginTest_001 -->
+      </class> <!-- com.drillbit.testCases.TC_ChangePwd_002 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

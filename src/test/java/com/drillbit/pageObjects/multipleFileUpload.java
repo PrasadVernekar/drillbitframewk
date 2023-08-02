@@ -58,6 +58,12 @@ WebDriver ldriver;
 	@FindBy(xpath="//*[text()='Submit']")
 	WebElement mSubmit;
 	
+	@FindBy(xpath="//*[@class='MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-1lsgdco']")
+	WebElement logodropdown;
+	
+	@FindBy(xpath="//*[text()='Log out']")
+	WebElement logout;
+	
 	public void addbtn() {
 		maddButton.click();
 	}
@@ -116,6 +122,14 @@ WebDriver ldriver;
 	
 	public void submit() {
 	mSubmit.click();
+	}
+	
+	public void logo() {
+		logodropdown.click();
+	}
+	
+	public void logout() {
+		logout.click();
 	}
 
 }

@@ -50,6 +50,19 @@ WebDriver ldriver;
 	@FindBy(xpath="//*[text()='Submit']")
 	WebElement Submit;
 	
+	@FindBy(xpath="//*[@aria-label='Delete']")
+	WebElement delete;
+	
+	@FindBy(xpath="//*[text()='Yes']")
+	WebElement yes;
+
+	
+	@FindBy(xpath="//*[@class='MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-1lsgdco']")
+	WebElement logodropdown;
+	
+	@FindBy(xpath="//*[text()='Log out']")
+	WebElement logout;
+	
 	public void addbtn() {
 		addButton.click();
 	}
@@ -96,5 +109,21 @@ WebDriver ldriver;
 	
 	public void submit() {
 	Submit.click();
+	}
+	
+	public void Delete() {
+		delete.click();
+		}
+		
+		public void Yes() {
+		yes.click();
+		}
+	
+	public void logo() {
+		logodropdown.click();
+	}
+	
+	public void Logout() {
+		logout.click();
 	}
 }

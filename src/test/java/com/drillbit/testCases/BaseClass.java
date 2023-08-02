@@ -2,6 +2,7 @@ package com.drillbit.testCases;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import javax.mail.MessagingException;
 
@@ -32,6 +33,7 @@ public class BaseClass {
 	@Parameters("browser")
 	@BeforeClass
 	public void setup(String brw) {
+		
 		if (brw.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", readconfig.getChromePath());
 			driver = new ChromeDriver();
@@ -45,10 +47,10 @@ public class BaseClass {
 		driver.get(baseURL);
 
 	}
-
-	
+	@AfterClass
 	public void tearDown() {
-		// driver.quit();
+		
+		 driver.quit();
 	}
 }
 	/*

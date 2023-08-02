@@ -39,6 +39,12 @@ public class Changepwd {
 	@CacheLookup
 	WebElement chanpd;
 	
+	@FindBy(xpath="//*[@class='MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-1lsgdco']")
+	WebElement logo;
+	
+	@FindBy(xpath="//*[text()='Log out']")
+	WebElement logout;
+	
 	public void dropDown() {
 		dropdown.click();
 	}
@@ -49,7 +55,6 @@ public class Changepwd {
 	
 	public void oldpassword(String oldpwd) {
 		oldpd.sendKeys(oldpwd); 
-		
 	}
 	
 	public void newPassword(String newpwd) {
@@ -62,6 +67,13 @@ public class Changepwd {
 	
 	public void chanpd() {
 		chanpd.click();
+	}
+	
+	public void DropDown() {
+		logo.click();
+	}
+	public void logout() {
+		logout.click();
 	}
 	
 	

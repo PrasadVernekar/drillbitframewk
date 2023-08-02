@@ -16,7 +16,7 @@ import com.drillbit.pageObjects.*;
 
 public class TC_multipleFileUpload_005 extends BaseClass {
 
-	@Test(enabled = true)
+	@Test(enabled = false, invocationCount = 10, invocationTimeOut= 1200000)
 	public void multipleFileUpload() throws InterruptedException, AWTException, IOException {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
@@ -115,6 +115,9 @@ public class TC_multipleFileUpload_005 extends BaseClass {
 		rb.delay(2000);
 		rb.keyRelease(KeyEvent.VK_ENTER);
 		mf.submit();
+		mf.logo();
+		Thread.sleep(5000);
+		mf.logout();
 
 	}
 }

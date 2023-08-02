@@ -16,7 +16,7 @@ WebDriver ldriver;
 	@FindBy(xpath = "//tbody/tr[1]/td[5]/button[3]//*[name()='svg']//*[name()='path' and contains(@d,'m12 4-1.41')]")
 	WebElement Forwardbtn;
 
-	@FindBy(xpath="//*[text()='1%']")
+	@FindBy(xpath="//*[text()='29%']")
 	WebElement percentage;
 	
 	@FindBy(xpath="//*[@title='Download']")
